@@ -1,0 +1,10 @@
+<div (click)="dropdownCta()">
+    <img src="https://firebasestorage.googleapis.com/v0/b/ng-backend-8a3aa.appspot.com/o/Assets%2Farrow-down-sign-to-navigate%20(1).png?alt=media&token=fea7a72a-ada7-4d07-99c8-3560155a1285" width="15" alt="">
+</div>
+<div class="chat-dropdown" #dropdown *ngIf="dropdownClicked">
+    <ul>
+        <li>Info</li>
+        <li>Export</li>
+        <li>Clear</li>
+    </ul>
+</div>
