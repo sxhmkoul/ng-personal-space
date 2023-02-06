@@ -21,4 +21,45 @@
 
 .chat-body{
     height: 450px;
+    overflow-y: scroll;
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.chat-body::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+
+.send{
+    border-radius: 100px;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.msg-input{
+    height: 35px;
+}
+
+.chat-bubble{
+    max-width: 75%;
+    position: relative;
+    margin-right: 20px !important;
+    padding: 5px 20px 5px 10px !important;
+    border-radius: 3px;
+}
+
+.chat-bubble:after{
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+    left: auto;
+	right: -10px;
+    top: 0px;
+	bottom: auto;
+	border: 12px solid;
+	border-color: white transparent transparent transparent;
 }
