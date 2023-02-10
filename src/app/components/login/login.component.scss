@@ -1,0 +1,46 @@
+.bg{
+    background: url("https://images.pexels.com/photos/2387793/pexels-photo-2387793.jpeg");
+    height: 1000px;
+    overflow: hidden;
+}
+
+.oauth-pill{
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 50px;
+}
+
+.main-card{
+    border-radius: 20px;
+}
+
+.oauth-pill:hover{
+    background-color: black;
+    color: white;
+    animation: fade 0.2s linear;
+}
+
+.link:hover{
+    font-weight: 600;
+}
+
+.sub-form{
+    animation: fade 0.7s linear;
+}
+
+.back-btn{
+    left: 40px;
+    font-size: 30px;
+}
+
+@keyframes fade {
+    from{
+        // background-color: white;
+        opacity: 0;
+    }
+
+    to{
+        // background-color: black;
+        opacity: 1;
+    }
+}

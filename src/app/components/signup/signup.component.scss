@@ -1,0 +1,28 @@
+.oauth-pill{
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 50px;
+}
+
+.oauth-pill:hover{
+    background-color: black;
+    color: white;
+    animation: fade 0.2s linear;
+}
+
+.link:hover{
+    font-weight: 600;
+}
+
+
+@keyframes fade {
+    from{
+        // background-color: white;
+        opacity: 0;
+    }
+
+    to{
+        // background-color: black;
+        opacity: 1;
+    }
+}
