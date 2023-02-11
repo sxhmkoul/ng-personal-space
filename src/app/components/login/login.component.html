@@ -1,46 +1,16 @@
     <div class="container-fluid bg m-0 p-0 w-100">
         <div class="p-3">
-          <div #signupBody class="row w-100 justify-content-center text-center d-flex chat-body">
+          <div #signupBody class="row w-100 justify-content-center text-center d-flex chat-body p-0 m-0">
             <div class="col-md-2">
             </div>
             <div class="col-md-8 position-relative main-card justify-content-center d-flex bg-white mt-4 p-4">
-                <div *ngIf="backBtn" class="position-absolute back-btn">
-                   <a class="text-decoration-none" routerLink="/login"><i class="bi bi-arrow-left"></i></a>
-                </div>
+                <app-back-button *ngIf="backBtn" path="/login/oauth"></app-back-button>
                 <div class="col-md-6 text-center d-flex flex-column justify-content-around">
-                    <h2 class="mt-2 mb-4">Welcome back to PersonalSpace</h2>
+                    <h2 class="mt-2 mb-4">Welcome back to <br>PersonalSpace</h2>
     
-                    <div class="sub-form" *ngIf="!isLogin">
-                    <div class="oauth-pill google d-flex justify-content-evenly mb-4">
-                        <i class="bi bi-google"></i>
-                        <span><a>Sign in via Google</a></span>
-                    </div>
-                    <div class="oauth-pill github d-flex justify-content-evenly mb-4">
-                        <i class="bi bi-github"></i>
-                        <span><a>Sign in via GitHub</a></span>
-                    </div>
-                    <!-- <div class="oauth-pill d-flex justify-content-evenly">
-                        <i class="bi bi-facebook"></i>
-                        <span>Sign up via Facebook</span>
-                    </div> -->
-                    <a class="text-decoration-none text-dark" routerLink="/" [queryParams]="{'mode': 'email'}"> <div (click)="signIn()" class="oauth-pill email d-flex justify-content-evenly mb-4">
-                        <i class="bi bi-envelope-at"></i>
-                        <span>Sign in via email</span>
-                    </div></a>
-
-                    <div>
-                        <span>Don't have an account? <a class="text-decoration-none text-success link" routerLink="/signup">Create one</a></span>
-                    </div>
-                </div>
+                    <router-outlet></router-outlet>
     
-                    <div class="sub-form" *ngIf="isLogin">
-                            <div class="d-flex flex-column">
-                                <input type="text" class="form-control mb-3" placeholder="Enter an email">
-                                <input type="password" class="form-control mb-3" placeholder="Enter a password">
-                                <button class="btn btn-primary mb-3 bg-success">Log in</button>
-                                <span>Don't have an account? <a class="text-decoration-none text-success link" routerLink="/signup">Create one</a></span>
-                            </div>
-                    </div>
+                    
     
                 </div>
             </div>

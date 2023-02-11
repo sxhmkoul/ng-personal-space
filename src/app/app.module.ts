@@ -9,6 +9,10 @@ import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { LogoutComponent } from './components/logout/logout.component';
 import { ChatspaceComponent } from './components/chatspace/chatspace.component';
+import { SignupFormComponent } from './components/signup-form/signup-form.component';
+import { LoginFormComponent } from './components/login-form/login-form.component';
+import { OauthComponent } from './components/oauth/oauth.component';
+import { BackButtonComponent } from './components/back-button/back-button.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +21,11 @@ import { ChatspaceComponent } from './components/chatspace/chatspace.component';
     LoginComponent,
     SignupComponent,
     LogoutComponent,
-    ChatspaceComponent
+    ChatspaceComponent,
+    SignupFormComponent,
+    LoginFormComponent,
+    OauthComponent,
+    BackButtonComponent
   ],
   imports: [
     BrowserModule,

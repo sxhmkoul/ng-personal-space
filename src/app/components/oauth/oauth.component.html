@@ -1,0 +1,22 @@
+<div class="sub-form">
+    <div class="oauth-pill google d-flex justify-content-evenly mb-4">
+        <i class="bi bi-google"></i>
+        <span><a>Sign in via Google</a></span>
+    </div>
+    <div class="oauth-pill github d-flex justify-content-evenly mb-4">
+        <i class="bi bi-github"></i>
+        <span><a>Sign in via GitHub</a></span>
+    </div>
+    <!-- <div class="oauth-pill d-flex justify-content-evenly">
+        <i class="bi bi-facebook"></i>
+        <span>Sign up via Facebook</span>
+    </div> -->
+    <a class="text-decoration-none text-dark" routerLink="/login/email"> <div (click)="signIn()" class="oauth-pill email d-flex justify-content-evenly mb-4">
+        <i class="bi bi-envelope-at"></i>
+        <span>Sign in via email</span>
+    </div></a>
+
+    <div>
+        <span>Don't have an account? <a class="text-decoration-none text-success link" routerLink="/signup">Create one</a></span>
+    </div>
+</div>

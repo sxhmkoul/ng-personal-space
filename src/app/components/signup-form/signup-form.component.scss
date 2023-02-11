@@ -1,0 +1,21 @@
+
+.link:hover{
+    font-weight: 600;
+}
+
+.sub-form{
+    animation: fade 0.7s linear;
+}
+
+
+@keyframes fade {
+    from{
+        // background-color: white;
+        opacity: 0;
+    }
+
+    to{
+        // background-color: black;
+        opacity: 1;
+    }
+}
