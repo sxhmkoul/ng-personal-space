@@ -1,8 +1,7 @@
-<div>
-    <div class="d-flex flex-column">
-        <input type="text" class="form-control mb-3" placeholder="Enter an email">
-        <input type="password" class="form-control mb-3" placeholder="Enter a password">
-        <button class="btn btn-primary mb-3 bg-success">Sign up</button>
+<div class="d-flex flex-column">
+        <input type="text" class="form-control mb-3" placeholder="Enter an email" [(ngModel)]="email">
+        <input type="password" class="form-control mb-3" placeholder="Enter a password" [(ngModel)]="password">
+        <span class="error-span text-danger mb-3" *ngIf="errorMsg"><i class="bi bi-info-circle"></i> {{errorMsg}}</span>
+        <button class="btn btn-primary mb-3 bg-success" (click)="signUpCta()">Sign up</button>
         <span>Already have an account? <a class="text-decoration-none text-success link" routerLink="/login">Log in</a></span>
     </div>
-</div>

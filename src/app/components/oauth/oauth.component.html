@@ -11,12 +11,12 @@
         <i class="bi bi-facebook"></i>
         <span>Sign up via Facebook</span>
     </div> -->
-    <a class="text-decoration-none text-dark" routerLink="/login/email"> <div (click)="signIn()" class="oauth-pill email d-flex justify-content-evenly mb-4">
+    <a class="text-decoration-none text-dark" [routerLink]="'/'+intra.pageType + '/email'"> <div (click)="signIn()" class="oauth-pill email d-flex justify-content-evenly mb-4">
         <i class="bi bi-envelope-at"></i>
         <span>Sign in via email</span>
     </div></a>
 
     <div>
-        <span>Don't have an account? <a class="text-decoration-none text-success link" routerLink="/signup">Create one</a></span>
+        <span>Don't have an account? <a class="text-decoration-none text-success link" [routerLink]="(intra.pageType == 'login' ? '/signup' : '/login')">Create one</a></span>
     </div>
 </div>
