@@ -20,7 +20,7 @@
 }
 
 .chat-body{
-    height: 450px;
+    height: 60rem;
     overflow-y: scroll;
     -ms-overflow-style: none;  /* Internet Explorer 10+ */
     scrollbar-width: none;  /* Firefox */
@@ -62,4 +62,14 @@
 	bottom: auto;
 	border: 12px solid;
 	border-color: white transparent transparent transparent;
+}
+
+.top-container{
+    overflow: hidden;
+    position: fixed;
+}
+
+.footer{
+    position: fixed;
+    bottom: 0;
 }

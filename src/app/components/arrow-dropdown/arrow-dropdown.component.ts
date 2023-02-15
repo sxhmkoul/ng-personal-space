@@ -1,5 +1,6 @@
 import { Component, ElementRef, HostListener, Input, ViewChild } from '@angular/core';
 import { Renderer2 } from '@angular/core';
+import { ChatService } from 'src/app/services/chat.service';
 
 @Component({
   selector: 'app-arrow-dropdown',
@@ -16,13 +17,19 @@ export class ArrowDropdownComponent {
   //   //   this.dropdownClicked = true;
   //   // } else this.dropdownClicked = false;
   // }
-  constructor(private renderer : Renderer2){}
+  constructor(private renderer : Renderer2, private ChatService: ChatService){}
   dropdownCta(){
     this.dropdownClicked = true;
     console.log(this.chatBody);
     this.renderer.listen(this.chatBody, 'click',  (event: Event) =>{
       this.dropdownClicked = false;
     })
+  }
+
+  deleteChats(){
+      this.ChatService.deleteChats().subscribe((res)=>{
+          console.log(res);
+      })
   }
 
 }
