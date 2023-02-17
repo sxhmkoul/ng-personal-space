@@ -54,6 +54,6 @@ export class ChatspaceComponent implements OnInit{
   }
 
   record(){
-    console.log('Feature coming soon');
+    console.log('Feature coming soon...');
   }
 }
