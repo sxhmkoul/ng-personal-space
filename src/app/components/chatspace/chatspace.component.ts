@@ -50,7 +50,7 @@ export class ChatspaceComponent implements OnInit{
     })
 
     this.chatBody.nativeElement.scrollTo(0,3000);
-    this.typing = ''
+    this.typing = '';
   }
 
   record(){
