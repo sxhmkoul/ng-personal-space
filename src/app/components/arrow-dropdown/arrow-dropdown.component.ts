@@ -28,7 +28,9 @@ export class ArrowDropdownComponent {
 
   deleteChats(){
       this.ChatService.deleteChats().subscribe((res)=>{
-          console.log(res);
+          // if(res == null){
+            this.ChatService.messages = [];
+          // }
       })
   }
 

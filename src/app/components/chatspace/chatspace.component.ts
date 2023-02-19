@@ -39,14 +39,16 @@ export class ChatspaceComponent implements OnInit{
     let date = new Date;
     // let stamp = date.toLocaleTimeString;
     // this.messages.push({id: serial, content: this.typing, timestamp: date});
+    this.ChatService.messages.push({id: serial, content: this.typing, timestamp: date});
     this.ChatService.sendChats({id: serial, content: this.typing, timestamp: date}).subscribe(res=>{
       console.log(res);
-      this.ChatService.fetchChats().subscribe((resp: any)=>{
-        this.ChatService.messages = [];
-        for(let x in resp){
-          this.ChatService.messages.push(resp[x]);
-        }
-      })
+
+      // this.ChatService.fetchChats().subscribe((resp: any)=>{
+      //   this.ChatService.messages = [];
+      //   for(let x in resp){
+      //     this.ChatService.messages.push(resp[x]);
+      //   }
+      // })
     })
 
     this.chatBody.nativeElement.scrollTo(0,3000);
