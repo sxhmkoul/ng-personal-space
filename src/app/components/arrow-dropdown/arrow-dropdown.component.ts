@@ -26,12 +26,18 @@ export class ArrowDropdownComponent {
     })
   }
 
-  deleteChats(){
+  deleteChats = () => {
       this.ChatService.deleteChats().subscribe((res)=>{
-          // if(res == null){
             this.ChatService.messages = [];
-          // }
       })
+  }
+
+  exportChats = () => {
+    alert('feature coming soon...');
+  }
+
+  showProfile = () => {
+    alert('feature coming soon...');
   }
 
 }

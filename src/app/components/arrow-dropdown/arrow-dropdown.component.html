@@ -4,7 +4,7 @@
 <div class="chat-dropdown" #dropdown *ngIf="dropdownClicked">
     <ul>
         <li>Info</li>
-        <li>Export</li>
+        <li (click)="exportChats()">Export</li>
         <li (click)="deleteChats()">Clear chat</li>
         <li><a routerLink="/logout">Logout</a></li>
     </ul>
